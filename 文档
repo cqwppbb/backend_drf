@@ -1,0 +1,6 @@
+restframework
+coreapi
+markdown
+pygments
+django-filter
+django-guardian(未安装)
