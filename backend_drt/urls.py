@@ -15,8 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls import url
-
+from django.urls import re_path
 from rest_framework.documentation import include_docs_urls
 from rest_framework_simplejwt.views import (
 	TokenObtainPairView,
@@ -42,6 +41,6 @@ urlpatterns = [
 
 		path("pm/", include("pm.urls")),
 		path("machine/", include("machine.urls")),
-		url(r"userinfo/", views.UserInfoView.as_view())
+		re_path(r"userinfo/", views.UserInfoView.as_view())
 
 ]
